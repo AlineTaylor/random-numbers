@@ -6,4 +6,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: lavender;
+  --easy-color: green;
+  --medium-color: orange;
+  --hard-color: red;
+  --impossible-color: darkslategray;
+  --ridiculous-color: purple;
+}
+
+h2 {
+  margin: 5px;
+  font-size: xx-large;
+  font-weight: 900;
+  text-align: center;
+}
+.game {
+  padding: 15px;
+  background-color: rgba(245, 245, 245, 0.5);
+}
+
+#easy h2 {
+  color: var(--easy-color);
+}
+#medium h2 {
+  color: var(--medium-color);
+}
+#hard h2 {
+  color: var(--hard-color);
+}
+#impossible h2 {
+  color: var(--impossible-color);
+}
+#ridiculous h2 {
+  color: var(--ridiculous-color);
 }
