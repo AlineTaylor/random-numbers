@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Guess the number</title>
+  </head>
+  <body>
+    <header>
+      <h1>Can you guess the number?</h1>
+      <div class="intro">
+        <p>Select a difficulty level below and test your guessing skills!</p>
+        <nav>
+          <ol>
+            <li><a href="#easy">Easy</a>: between 1 and 5</li>
+            <li><a href="#medium">Medium</a>: between 1 and 10</li>
+            <li><a href="#hard">Hard</a>: between 1 and 100</li>
+            <li><a href="#impossible">Impossible</a>: between 1 and 1,000</li>
+            <li>
+              <a href="#ridiculous">Ridiculous</a>: between 1 and 1,000,000
+            </li>
+          </ol>
+        </nav>
+      </div>
+    
+    <main>
+      <!-- Level easy game screen -->
+      <div id="easy">
+        <h2>Easy</h2>
+        <p>Between 1 and 5: what number am I thinking of?</p>
+        <form>
+          <label for="inputEasy">Your guess: </label>
+          <input type="number" class="guess" id="inputEasy" name="inputEasy" min="1" max="5" required/>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <!-- Result portion that will stay hidden until input is processed -->
+      <div class="result">
+        <p class="correct">You guessed right! Not bad!</p>
+        <p class="close">Close! But not quite...</p>
+        <p class="incorrect">Nope! Try again.</p>
+      </div>
+      <!-- Reset button for reattempt -->
+      <div class="tryAgain">
+        <p>Would you like to try again?</p>
+        <button>Try again</button>
+      </div>
+      <br>
+      <!-- Level medium game screen -->
+      <div id="medium">
+        <h2>Medium</h2>
+        <p>Between 1 and 10: what number am I thinking of?</p>
+        <form>
+          <label for="inputMedium">Your guess: </label>
+          <input type="number" class="guess" id="inputMedium" name="inputMedium" min="1" max="10" required/>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <!-- Result portion that will stay hidden until input is processed -->
+      <div class="result">
+        <p class="correct">You guessed right! Impressive!</p>
+        <p class="close">Close! But not quite...</p>
+        <p class="incorrect">Nope! Try again.</p>
+      </div>
+      <!-- Reset button for reattempt -->
+      <div class="tryAgain">
+        <p>Would you like to try again?</p>
+        <button>Try again</button>
+      </div>
+      <br>
+      <!-- Level hard game screen -->
+      <div id="hard">
+        <h2>Hard</h2>
+        <p>Between 1 and 100: what number am I thinking of?</p>
+        <form>
+          <label for="inputHard">Your guess: </label>
+          <input type="number" class="guess" id="inputHard" name="inputHard" min="1" max="100" required/>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <!-- Result portion that will stay hidden until input is processed -->
+      <div class="result">
+        <p class="correct">You guessed right! Unbelievable!</p>
+        <p class="close">Close! But not quite...</p>
+        <p class="incorrect">Nope! Try again.</p>
+      </div>
+      <!-- Reset button for reattempt -->
+      <div class="tryAgain">
+        <p>Would you like to try again?</p>
+        <button>Try again</button>
+      </div>
+      <br>
+      <!-- Level impossible game screen -->
+      <div id="impossible">
+        <h2>Impossible</h2>
+        <p>Between 1 and 1,000: what number am I thinking of?</p>
+        <form>
+          <label for="inputImpossible">Your guess: </label>
+          <input type="number" class="guess" id="inputImpossible" name="inputImpossible" min="1" max="1000" required/>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <!-- Result portion that will stay hidden until input is processed -->
+      <div class="result">
+        <p class="correct">No way... You got it!</p>
+        <p class="close">Close! But not quite...</p>
+        <p class="incorrect">Nope! Try again.</p>
+      </div>
+      <!-- Reset button for reattempt -->
+      <div class="tryAgain">
+        <p>Would you like to try again?</p>
+        <button>Try again</button>
+      </div>
+      <br>
+      <!-- Level ridiculous game screen -->
+      <div id="ridiculous">
+        <h2>Ridiculous</h2>
+        <p>Between 1 and 1,000,000: what number am I thinking of?</p>
+        <form>
+          <label for="inputRidiculous">Your guess: </label>
+          <input type="number" class="guess" id="inputRidiculous" name="inputRidiculous" min="1" max="1000" required/>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <!-- Result portion that will stay hidden until input is processed -->
+      <div class="result">
+        <p class="correct">...how on Earth!?</p>
+        <p class="close">Don't mean lead you on but- you're actually kind of close!</p>
+        <p class="incorrect">Nope! Don't feel bad, though - we both knew this was going to happen.</p>
+      </div>
+      <!-- Reset button for reattempt -->
+      <div class="tryAgain">
+        <p>Would you like to try again?</p>
+        <button>Try again</button>
+      </div>
+      <br>
+    </main>
+    <footer> 
+      <h2>Thank you for playing!</h2>
+      <a href="#">Back to top</a>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>
