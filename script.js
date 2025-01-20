@@ -17,8 +17,7 @@ if (inputEasy === easyNum){
     closeAnswer.style.display = 'block';
 } else (inputEasy > easyNum+1){
     const incorrectAnswer = document.querySelector('.close');
-    incorrectAnswer.style.display = 'block';
-}
+    incorrectAnswer.style.display = 'block';}
 
 //Try again button display
 //TODO Make this button work and isolate response by level (so not all levels are displaying the section when one is attempted)
