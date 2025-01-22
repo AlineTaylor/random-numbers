@@ -19,15 +19,15 @@ generateNumber(level.easy); //OMG it works, holy cow, it works
 // TODO create HTML display for randomly generated number that stays hidden until guess is submitted
 const inputEasy = document.getElementById("inputEasy");
 //TODO double-check to see if there isn't a more efficient way to code the conditions below
-if (inputEasy === displayNumber) {
+if (inputEasy === generateNumber(level.easy)) {
   // Select the element with the class "correct"
   const correctAnswer = document.querySelector(".correct");
   // Unhide it by changing its display property
   correctAnswer.style.display = "block";
-} else if (inputEasy === easyNum + 1) {
+} else if (inputEasy === generateNumber(level.easy) + 1) {
   const closeAnswer = document.querySelector(".close");
   closeAnswer.style.display = "block";
-} else if (inputEasy === easyNum - 1) {
+} else if (inputEasy === generateNumber(level.easy) - 1) {
   const closeAnswer = document.querySelector(".close");
   closeAnswer.style.display = "block";
 } else {
