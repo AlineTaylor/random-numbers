@@ -25,15 +25,15 @@ const input = {
   ridiculous: document.getElementById("inputRidiculous"),
 };
 //TODO double-check to see if there isn't a more efficient way to code the conditions below
-if (input.easy === generateNumber(level.easy)) {
+if (input.easy === generateNumber(level.easy.value)) {
   // Select the element with the class "correct"
   const correctAnswer = document.querySelector(".correct");
   // Unhide it by changing its display property
   correctAnswer.style.display = "block";
-} else if (input.easy === generateNumber(level.easy) + 1) {
+} else if (input.easy === generateNumber(level.easy.value) + 1) {
   const closeAnswer = document.querySelector(".close");
   closeAnswer.style.display = "block";
-} else if (input.easy === generateNumber(level.easy) - 1) {
+} else if (input.easy === generateNumber(level.easy.value) - 1) {
   const closeAnswer = document.querySelector(".close");
   closeAnswer.style.display = "block";
 } else {
