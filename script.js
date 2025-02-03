@@ -1,4 +1,5 @@
-//function that generate numbers according to each level
+//Ingredients
+//Declaring level limits
 const level = {
   easy: 5,
   medium: 10,
@@ -6,24 +7,42 @@ const level = {
   impossible: 1000,
   ridiculous: 1000000,
 };
+//Calling inputs values from dom
+//TODO test the '.value' added!
+const input = {
+  easy: document.getElementById("inputEasy").value,
+  medium: document.getElementById("inputMedium").value,
+  hard: document.getElementById("inputHard").value,
+  impossible: document.getElementById("inputImpossible").value,
+  ridiculous: document.getElementById("inputRidiculous").value,
+};
 
+//Call submit buttons and number display
+//TODO isolate button response by level (so not all levels are displaying the section when one is attempted)
+const submitButton = document.querySelectorAll(".submit");
+const generatedNum = document.querySelectorAll(".generatedNum");
+const tryAgain = document.querySelector(".tryAgain");
+
+//Recipe
+//function that generates numbers according to each level then displays it //TODO test the display
 function generateNumber(levelSelection) {
   let displayNumber = Math.floor(Math.random() * levelSelection + 1);
   console.log(displayNumber);
+  generatedNum.textContent = displayNumber;
   return displayNumber;
 }
 
-generateNumber(level.easy); //OMG it works, holy cow, it works
-// Now what lol
+//TODO if the display works, add display to other levels as well and differentiate based on level?
+//TODO think of ways to maximize function efficiency by reusing for all levels - maybe reference the RPS project on the videos to see how he went about it
 
-// TODO create HTML display for randomly generated number that stays hidden until guess is submitted
-const input = {
-  easy: document.getElementById("inputEasy"),
-  medium: document.getElementById("inputMedium"),
-  hard: document.getElementById("inputHard"),
-  impossible: document.getElementById("inputImpossible"),
-  ridiculous: document.getElementById("inputRidiculous"),
-};
+generateNumber(level.easy); //OMG it works, holy cow, it works!...Now what lol
+
+//Event listener to generate random numbers at the click of the submit button and display Try again button
+submitButton.addEventListener("click", () => {
+  generateNumber(/*TODO find a way to target the level the button is in*/);
+  tryAgain.style.display = "block";
+});
+
 //TODO double-check to see if there isn't a more efficient way to code the conditions below
 if (input.easy === generateNumber(level.easy.value)) {
   // Select the element with the class "correct"
@@ -40,17 +59,5 @@ if (input.easy === generateNumber(level.easy.value)) {
   const incorrectAnswer = document.querySelector(".close");
   incorrectAnswer.style.display = "block";
 }
-
-//Try again button display
-//TODO Make this button work and isolate response by level (so not all levels are displaying the section when one is attempted)
-// Select the button and the message div
-const submitButton = document.querySelector(".submit");
-const tryAgain = document.querySelector(".tryAgain");
-
-// Add a click event listener to the button
-submitButton.addEventListener("click", () => {
-  // Show the hidden portion by changing its display property
-  tryAgain.style.display = "block";
-});
 
 //TODO create reset fucntion using the tryAgain button to clear inputs but from that level only
